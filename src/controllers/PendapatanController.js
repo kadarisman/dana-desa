@@ -6,7 +6,7 @@ const getAllPendapatan = async (req, res) =>{
         const pendapatanData = await pendapatan.getAllPendapatan();
         res.status(201).json({data : pendapatanData});
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         res.status(401).json({message : error});
     }
 }
@@ -28,7 +28,6 @@ const getPendapatanById = async (req, res) => {
 const createPendapatan = (req, res) =>{
     try {
         const auth = req.auth;
-        console.log(auth)
         const pendapatanData ={
             jumlah          : req.body.jumlah,
             sumber          : req.body.sumber,
@@ -73,7 +72,7 @@ const updatePendapatan = async (req, res) => {
             res.status(400).json({message: err});
         })
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         res.status(500).json({message: error});
     }
 }

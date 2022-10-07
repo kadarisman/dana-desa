@@ -5,12 +5,13 @@ const getAllDetailBelanja = () => {
     'db.updated_at', 'b.bidang')
     .from('detail_belanja as db')
     .leftJoin('user as u', 'db.user_created', 'u.id')
-    .leftJoin('bidang_belanja as b', 'b.id', 'db.id_bidang');
+    .leftJoin('bidang_belanja as b', 'b.id', 'db.id_bidang')
+    .orderBy('b.bidang', 'desc');
 }
 
 const getDetailBelanjaById = (id) => {    
     return knex.select('db.id', 'db.jumlah', 'db.tanggal',  'u.nama as user_created', 'db.created_at', 
-    'db.updated_at', 'b.bidang')
+    'db.updated_at', 'b.bidang', 'db.id_bidang')
     .from('detail_belanja as db')
     .leftJoin('user as u', 'db.user_created', 'u.id')
     .leftJoin('bidang_belanja as b', 'b.id', 'db.id_bidang')

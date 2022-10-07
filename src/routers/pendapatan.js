@@ -11,8 +11,8 @@ const {
 
 router.get('/', getAllPendapatan);
 router.get('/:id', getPendapatanById);
-router.post('/', middleware.isAuth, validationPendapatan, createPendapatan);
-router.put('/:id?', middleware.isAuth, updatePendapatan);
-router.delete('/:id?', middleware.isAuth, deletePendapatan);
+router.post('/',middleware.isAuth, createPendapatan);
+router.put('/:id?',middleware.isAuth, updatePendapatan);
+router.delete('/:id?',middleware.isAuth, deletePendapatan);
 
 module.exports = router;

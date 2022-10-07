@@ -9,7 +9,7 @@ const loginCheck = (username, password) => {
 }
 
 const getAllUser = () => {
-    return knex.select('u.nama', 'u.username', 'u.created_at', 'u.updated_at').from('user as u');
+    return knex.select('u.id', 'u.nama', 'u.username', 'u.created_at', 'u.updated_at').from('user as u');
 }
 
 const getuserByUsername = (username)=>{
@@ -17,7 +17,7 @@ const getuserByUsername = (username)=>{
 }
 
 const getUserById = (id) => {    
-    return knex.select('u.nama', 'u.username', 'u.created_at', 'u.updated_at').from('user as u').where({id:id}).first();
+    return knex.select('u.id', 'u.nama', 'u.username', 'u.created_at', 'u.updated_at').from('user as u').where({id:id}).first();
 }
  
 const insertUser = (data) =>{

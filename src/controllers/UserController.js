@@ -42,6 +42,7 @@ const createUser = (req, res) =>{
             res.status(400).json({message : err});
         })
     } catch (error) {
+        // console.log(error);
         res.status(500).json({message: error});
     }
 }
@@ -72,7 +73,7 @@ const updateUser = async (req, res) => {
             res.status(400).json({message: err});
         })
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         res.status(500).json({message: error});
     }
 }

@@ -11,7 +11,7 @@ const {
 router.get('/', getAllBidangBelanja);
 router.get('/:id', getBidangBelanjaById);
 router.post('/', middleware.isAuth, createBidangBelanja);
-router.put('/:id?', middleware.isAuth,  updateBidangBelanja);
+router.put('/:id?',middleware.isAuth, updateBidangBelanja);
 router.delete('/:id?', middleware.isAuth, deleteBidangBelanja);
 
 module.exports = router;

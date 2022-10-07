@@ -29,9 +29,10 @@ const createBidangBelanja = (req, res) =>{
     try {
         const bidangBelanjaData ={
             bidang          : req.body.bidang,
-            user_created    : req.body.user_created,
+            user_created    : req.auth.id,
             created_at      : localISOTime
         };
+        // console.log(bidangBelanja);
         bidangBelanja.insertBidangBelanja(bidangBelanjaData)
         .then(row =>{
             res.status(201).json({message: `Bidang Belanja saved`})
@@ -40,6 +41,7 @@ const createBidangBelanja = (req, res) =>{
             res.status(400).json({message : err});
         })
     } catch (error) {
+        console.log(error);
         res.status(500).json({message: error});
     }
 }
@@ -69,7 +71,7 @@ const updateBidangBelanja = async (req, res) => {
             res.status(400).json({message: err});
         })
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         res.status(500).json({message: error});
     }
 }

@@ -18,10 +18,10 @@ const login =  async (req, res) => {
         }
         const token = jwt.sign({
             id : userByUsername.id,
-            nama : userByUsername.nama
+            nama : userByUsername.nama,
         },process.env.SECRET);
 
-        res.status(201).json({token : token});
+        res.status(201).json({token : token, nama: userByUsername.nama, id: userByUsername.id});
         var decode = jwt.verify(token, process.env.SECRET);
         req.auth = decode;
     } catch (error) {
