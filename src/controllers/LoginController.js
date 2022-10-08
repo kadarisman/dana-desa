@@ -25,7 +25,7 @@ const login =  async (req, res) => {
         var decode = jwt.verify(token, process.env.SECRET);
         req.auth = decode;
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         res.status(401).json({error : error});
     }   
 }

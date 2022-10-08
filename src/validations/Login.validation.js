@@ -13,14 +13,14 @@ const validationLogin = async (req, res, next) => {
             stripUnknow : true
         };
         const value = await validLogin.validate(req.body, options);
-        console.log(req.body);
+        // console.log(req.body);
         if(value.error){
             res.json({error : value.error.details[0].message});
             return false;
         } 
         next();
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         res.status(400).json({error : error})
     }
 }

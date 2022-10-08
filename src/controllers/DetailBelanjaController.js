@@ -30,6 +30,7 @@ const createDetailBelanja = (req, res) =>{
         const detailBelanjaData ={
             id_bidang       : req.body.id_bidang,
             jumlah          : req.body.jumlah,
+            nama_item       : req.body.nama_item,
             tanggal         : reversDate(req.body.tanggal),
             user_created    : req.auth.id,
             created_at      : localISOTime
@@ -63,6 +64,7 @@ const updateDetailBelanja = async (req, res) => {
         const detailBelanjaData ={
             id_bidang   : req.body.id_bidang,
             jumlah      : req.body.jumlah,
+            nama_item   : req.body.nama_item,
             tanggal     : req.body.tanggal,
             updated_at  : localISOTime
         };
@@ -76,7 +78,7 @@ const updateDetailBelanja = async (req, res) => {
             res.status(400).json({message: err});
         })
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         res.status(500).json({message: error});
     }
 }
