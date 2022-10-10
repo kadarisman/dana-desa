@@ -3,6 +3,11 @@ const bodyParser = require('body-parser');
 const Routers = require('./routers/index');
 require('dotenv').config();
 const cors          = require('cors');
+const fs            = require('fs');
+
+const swaggerFile   = 'swagger.json';
+const swaggerDataJson = JSON.parse(fs.readFileSync(swaggerFile, 'utf8'));
+const swaggerUi     = require('swagger-ui-express');
 
 const app = express();
 const port = 9001;
@@ -10,6 +15,7 @@ const port = 9001;
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json({limit: '10mb'}));
+app.use('/api-docs',swaggerUi.serve,swaggerUi.setup(swaggerDataJson));
 
 app.get('/', (req, res)=>{
     res.set('Content-Type', 'text/html');

@@ -1,0 +1,990 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "dana-desa",
+    "contact": {}
+  },
+  "host": "localhost:9001",
+  "basePath": "/",
+  "securityDefinitions": {},
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/users": {
+      "get": {
+        "summary": "Get users",
+        "tags": [
+          "user"
+        ],
+        "operationId": "Getusers",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "default": "Bearer {token}",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "post": {
+        "summary": "Create user",
+        "tags": [
+          "user"
+        ],
+        "operationId": "Createuser",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "default": "Bearer {token}",
+            "type": "string"
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreateuserRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/users/1": {
+      "get": {
+        "summary": "Get users by id",
+        "tags": [
+          "user"
+        ],
+        "operationId": "Getusersbyid",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "default": "Bearer {token}",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/users/14": {
+      "put": {
+        "summary": "Update User",
+        "tags": [
+          "user"
+        ],
+        "operationId": "UpdateUser",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "default": "Bearer {token}",
+            "type": "string"
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdateUserRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/users/2": {
+      "delete": {
+        "summary": "Delete User",
+        "tags": [
+          "user"
+        ],
+        "operationId": "DeleteUser",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "default": "Bearer {token}",
+            "type": "string"
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/DeleteUserRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/pendapatan": {
+      "get": {
+        "summary": "Get pendapatan",
+        "tags": [
+          "pendapatan"
+        ],
+        "operationId": "Getpendapatan",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "default": "Bearer {token}",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "post": {
+        "summary": "Create pendapatan",
+        "tags": [
+          "pendapatan"
+        ],
+        "operationId": "Creatependapatan",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "default": "Bearer {token}",
+            "type": "string"
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreatependapatanRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/pendapatan/1": {
+      "get": {
+        "summary": "Get pendapatan by id",
+        "tags": [
+          "pendapatan"
+        ],
+        "operationId": "Getpendapatanbyid",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "default": "Bearer {token}",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/pendapatan/": {
+      "put": {
+        "summary": "Update pendapatan",
+        "tags": [
+          "pendapatan"
+        ],
+        "operationId": "Updatependapatan",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "default": "Bearer {token}",
+            "type": "string"
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdatependapatanRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/pendapatan/2": {
+      "delete": {
+        "summary": "Delete pendapatan",
+        "tags": [
+          "pendapatan"
+        ],
+        "operationId": "Deletependapatan",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "default": "Bearer {token}",
+            "type": "string"
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/DeletependapatanRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/bidang-belanja": {
+      "get": {
+        "summary": "Get bidang belanja",
+        "tags": [
+          "bidang-belanja"
+        ],
+        "operationId": "Getbidangbelanja",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "default": "Bearer {token}",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "post": {
+        "summary": "Created bidang belanja",
+        "tags": [
+          "bidang-belanja"
+        ],
+        "operationId": "Createdbidangbelanja",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "default": "Bearer {token}",
+            "type": "string"
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreatedbidangbelanjaRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/bidang-belanja/1": {
+      "get": {
+        "summary": "Get bidang belanja by id",
+        "tags": [
+          "bidang-belanja"
+        ],
+        "operationId": "Getbidangbelanjabyid",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "default": "Bearer {token}",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "put": {
+        "summary": "Update bidang belanja",
+        "tags": [
+          "bidang-belanja"
+        ],
+        "operationId": "Updatebidangbelanja",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "default": "Bearer {token}",
+            "type": "string"
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdatebidangbelanjaRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/bidang-belanja/2": {
+      "delete": {
+        "summary": "Delete bidang belanja",
+        "tags": [
+          "bidang-belanja"
+        ],
+        "operationId": "Deletebidangbelanja",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "default": "Bearer {token}",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/detail-belanja": {
+      "get": {
+        "summary": "Get detail belanja",
+        "tags": [
+          "detail-belanja"
+        ],
+        "operationId": "Getdetailbelanja",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "default": "Bearer {token}",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "post": {
+        "summary": "Create detail belanja",
+        "tags": [
+          "detail-belanja"
+        ],
+        "operationId": "Createdetailbelanja",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "default": "Bearer {token}",
+            "type": "string"
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreatedetailbelanjaRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/detail-belanja/9": {
+      "get": {
+        "summary": "Get detail belanja by id",
+        "tags": [
+          "detail-belanja"
+        ],
+        "operationId": "Getdetailbelanjabyid",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "default": "Bearer {token}",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/detail-belanja/3": {
+      "put": {
+        "summary": "Update detail belanja",
+        "tags": [
+          "detail-belanja"
+        ],
+        "operationId": "Updatedetailbelanja",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "default": "Bearer {token}",
+            "type": "string"
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdatedetailbelanjaRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/detail-belanja/2": {
+      "delete": {
+        "summary": "Delete detail belanja",
+        "tags": [
+          "detail-belanja"
+        ],
+        "operationId": "Deletedetailbelanja",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "default": "Bearer {token}",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/login": {
+      "post": {
+        "summary": "Login",
+        "tags": [
+          "Auth"
+        ],
+        "operationId": "Login",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "default": "Bearer {token}",
+            "type": "string"
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/LoginRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "CreateuserRequest": {
+      "title": "CreateuserRequest",
+      "example": {
+        "nama": "test 2",
+        "username": "test2",
+        "password": "123"
+      },
+      "type": "object",
+      "properties": {
+        "nama": {
+          "type": "string"
+        },
+        "username": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "nama",
+        "username",
+        "password"
+      ]
+    },
+    "UpdateUserRequest": {
+      "title": "UpdateUserRequest",
+      "example": {
+        "nama": "edit",
+        "username": "edit"
+      },
+      "type": "object",
+      "properties": {
+        "nama": {
+          "type": "string"
+        },
+        "username": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "nama",
+        "username"
+      ]
+    },
+    "DeleteUserRequest": {
+      "title": "DeleteUserRequest",
+      "example": {
+        "nama": "Yuzar Kadarisman",
+        "username": "risman"
+      },
+      "type": "object",
+      "properties": {
+        "nama": {
+          "type": "string"
+        },
+        "username": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "nama",
+        "username"
+      ]
+    },
+    "CreatependapatanRequest": {
+      "title": "CreatependapatanRequest",
+      "example": {
+        "jumlah": 2000000,
+        "sumber": "APBD",
+        "user_created": 1
+      },
+      "type": "object",
+      "properties": {
+        "jumlah": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "sumber": {
+          "type": "string"
+        },
+        "user_created": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "jumlah",
+        "sumber",
+        "user_created"
+      ]
+    },
+    "UpdatependapatanRequest": {
+      "title": "UpdatependapatanRequest",
+      "example": {
+        "jumlah": 1300000,
+        "sumber": "APBD"
+      },
+      "type": "object",
+      "properties": {
+        "jumlah": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "sumber": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "jumlah",
+        "sumber"
+      ]
+    },
+    "DeletependapatanRequest": {
+      "title": "DeletependapatanRequest",
+      "example": {
+        "jumlah": 1300000,
+        "sumber": "APBD"
+      },
+      "type": "object",
+      "properties": {
+        "jumlah": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "sumber": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "jumlah",
+        "sumber"
+      ]
+    },
+    "CreatedbidangbelanjaRequest": {
+      "title": "CreatedbidangbelanjaRequest",
+      "example": {
+        "bidang": "Pembangunan",
+        "user_created": 1
+      },
+      "type": "object",
+      "properties": {
+        "bidang": {
+          "type": "string"
+        },
+        "user_created": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "bidang",
+        "user_created"
+      ]
+    },
+    "UpdatebidangbelanjaRequest": {
+      "title": "UpdatebidangbelanjaRequest",
+      "example": {
+        "bidang": "Bidang Upah Pejabat Desa"
+      },
+      "type": "object",
+      "properties": {
+        "bidang": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "bidang"
+      ]
+    },
+    "CreatedetailbelanjaRequest": {
+      "title": "CreatedetailbelanjaRequest",
+      "example": {
+        "id_bidang": 7,
+        "jumlah": 100,
+        "nama_item": "texst",
+        "tanggal": "07/11/2022",
+        "user_created": 1
+      },
+      "type": "object",
+      "properties": {
+        "id_bidang": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "jumlah": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "nama_item": {
+          "type": "string"
+        },
+        "tanggal": {
+          "type": "string"
+        },
+        "user_created": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "id_bidang",
+        "jumlah",
+        "nama_item",
+        "tanggal",
+        "user_created"
+      ]
+    },
+    "UpdatedetailbelanjaRequest": {
+      "title": "UpdatedetailbelanjaRequest",
+      "example": {
+        "id_bidang": 3,
+        "jumlah": 300000,
+        "nama_item": "texst",
+        "tanggal": "2022-09-13 21:08:41"
+      },
+      "type": "object",
+      "properties": {
+        "id_bidang": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "jumlah": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "nama_item": {
+          "type": "string"
+        },
+        "tanggal": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id_bidang",
+        "jumlah",
+        "nama_item",
+        "tanggal"
+      ]
+    },
+    "LoginRequest": {
+      "title": "LoginRequest",
+      "example": {
+        "username": "risman",
+        "password": "123"
+      },
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "username",
+        "password"
+      ]
+    }
+  },
+  "security": [],
+  "tags": [
+    {
+      "name": "user"
+    },
+    {
+      "name": "pendapatan"
+    },
+    {
+      "name": "bidang-belanja"
+    },
+    {
+      "name": "detail-belanja"
+    },
+    {
+      "name": "Auth"
+    }
+  ]
+}
