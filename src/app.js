@@ -10,7 +10,7 @@ const swaggerDataJson = JSON.parse(fs.readFileSync(swaggerFile, 'utf8'));
 const swaggerUi     = require('swagger-ui-express');
 
 const app = express();
-const port = 9001;
+const port = process.env.PORT || 9001;
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
