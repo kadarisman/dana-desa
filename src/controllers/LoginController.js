@@ -7,13 +7,13 @@ const login =  async (req, res) => {
         const {username, password} = req.body;
         const userByUsername = await user.getuserByUsername(username);        
         if(!userByUsername){
-            res.json({error : `Username '${username}' not found`});
+            res.status(401).json({error : `Username '${username}' not found`});
             return false; 
         }
         const validPassword = await bcrypt.compare(password, userByUsername.password);
         // const userLogin = await user.loginCheck(username, validPassword);
         if(!validPassword){
-            res.json({error : 'Password Wrong!'});
+            res.status(401).json({error : 'Password Wrong!'});
             return false;            
         }
         const token = jwt.sign({
