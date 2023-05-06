@@ -5,7 +5,7 @@
     "title": "dana-desa",
     "contact": {}
   },
-  "host": "localhost:9001",
+  "host": "localhost:9001https://amaranth-jackrabbit-cape.cyclic.app",
   "basePath": "/",
   "securityDefinitions": {},
   "schemes": [
