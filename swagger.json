@@ -5,11 +5,11 @@
     "title": "dana-desa",
     "contact": {}
   },
-  "host": "dana-desa.herokuapp.com",
+  "host": "localhost:9001",
   "basePath": "/",
   "securityDefinitions": {},
   "schemes": [
-    "https"
+    "http"
   ],
   "consumes": [
     "application/json"

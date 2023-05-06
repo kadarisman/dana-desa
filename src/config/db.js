@@ -6,10 +6,10 @@ const config_knex = {
       // user : 'root',
       // password : '',
       // database : 'dana_desa'
-      host : "us-east.connect.psdb.cloud",
+      host : "aws.connect.psdb.cloud",
       port : "3306",
-      user : "tsnq8vj0gw5r69nnjtlk",
-      password : "pscale_pw_uduJ3jzHoRNuDC1Gb0OgCF8nYwwnqQqJ8VXQKVqzMwU",
+      user : "rjgud5utfelc4126dcy5",
+      password : "pscale_pw_rqQL7usMKSEaX9qHzv7a4RSE0beO1O04cVn86Ooo7Rl",
       database : "danadesa",
       ssl:{
           "rejectUnauthorized":true
