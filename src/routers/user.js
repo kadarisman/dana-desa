@@ -10,7 +10,7 @@ const {
 
 router.get('/', getAllUser);
 router.get('/:id', getUserById);
-router.post('/',middleware.isAuth, createUser);
+router.post('/', createUser);
 router.put('/:id?',middleware.isAuth, updateUser);
 router.delete('/:id?',middleware.isAuth, deleteUser);
 

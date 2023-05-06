@@ -5,7 +5,8 @@ const jwt    = require('jsonwebtoken');
 const login =  async (req, res) => {
     try {
         const {username, password} = req.body;
-        const userByUsername = await user.getuserByUsername(username);        
+        const userByUsername = await user.getuserByUsername(username); 
+        // console.log(userByUsername)       
         if(!userByUsername){
             res.status(401).json({error : `Username '${username}' not found`});
             return false; 
@@ -25,7 +26,7 @@ const login =  async (req, res) => {
         var decode = jwt.verify(token, process.env.SECRET);
         req.auth = decode;
     } catch (error) {
-        // console.log(error);
+        console.log(error);
         res.status(401).json({error : error});
     }   
 }
